@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus • Modern Todo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+</head>
+<body data-theme="dark">
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">✨</div>
+                <span>Focus</span>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <span id="themeIcon">🌙</span>
+                <span id="themeText">Dark Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <div id="notificationStatus" class="notification-status"></div>
+
+
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="What needs to be done today?"
+                        maxlength="100"
+                    />
+                </div>
+                <button class="add-btn" id="addBtn">
+                    <span>✨</span>
+                    <span>Add Task</span>
+                </button>
+            </div>
+            
+            <div class="time-section">
+                <input type="datetime-local" id="timeInput" class="time-input" />
+                <button class="reminder-toggle" id="reminderToggle">
+                    <span>🔔</span>
+                    <span>Set Reminder</span>
+                </button>
+            </div>
+        </div>
+
+        <ul class="todo-list" id="todoList">
+        </ul>
+
+        <div class="controls">
+            <div style="color: var(--text-secondary); font-weight: 500;">
+                <span id="taskCount">0</span> tasks remaining
+            </div>
+            <button class="clear-btn" id="clearBtn">
+                🗑️ Clear Completed
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
